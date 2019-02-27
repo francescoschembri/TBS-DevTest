@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
 
         if (health == 0)
         {
+            gameController.DangerAlertOff();
             if (explosionVFX != null)
             {
                 Instantiate(explosionVFX, transform.position, transform.rotation);
