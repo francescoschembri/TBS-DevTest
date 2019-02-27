@@ -62,6 +62,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BGScroller.cs" />
     <Compile Include="Assets\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\DangerSFX.cs" />
+    <Compile Include="Assets\Scripts\DangerVFX.cs" />
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\Scripts\DestroyByContact.cs" />
     <Compile Include="Assets\Scripts\DestroyByTime.cs" />

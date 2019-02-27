@@ -35,10 +35,15 @@ public class GameController : MonoBehaviour
     private float SFXMultiplier = 1f;
     private AudioSource audioSource;
 
+    private DangerVFX dangerVFX;
+    private DangerSFX dangerSFX;
+
     public float GetSFXMultiplier() { return SFXMultiplier; }
 
     void Start()
     {
+        dangerVFX = FindObjectOfType<DangerVFX>();
+        dangerSFX = GetComponentInChildren<DangerSFX>();
         audioSource = GetComponent<AudioSource>();
         defaultTimeScale = Time.timeScale;
         paused = false;
@@ -152,5 +157,17 @@ public class GameController : MonoBehaviour
     {
         gameOverText.text = "Game Over!";
         gameOver = true;
+    }
+
+    public void DangerAlertOn()
+    {
+        dangerVFX.enabled = true;
+        dangerSFX.enabled = true;
+    }
+
+    public void DangerAlertOff()
+    {
+        dangerVFX.enabled = false;
+        dangerSFX.enabled = false;
     }
 }

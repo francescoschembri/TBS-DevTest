@@ -80,6 +80,10 @@ public class PlayerController : MonoBehaviour
             shield.SetActive(false);
         else
             health--;
+
+        if (health == 1)
+            gameController.DangerAlertOn();
+
         if (health == 0)
         {
             if (explosionVFX != null)
@@ -97,6 +101,10 @@ public class PlayerController : MonoBehaviour
     {
         if (health < 3)
             health++;
+        if (health == 2)
+        {
+            gameController.DangerAlertOff();
+        }
     }
 
     public void ActiveShield()
