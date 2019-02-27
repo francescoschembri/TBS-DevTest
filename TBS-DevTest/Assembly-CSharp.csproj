@@ -60,39 +60,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Complete-Game\Scripts\ChangeColor.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_BGScroller.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_DestroyByBoundary.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_DestroyByContact.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_DestroyByTime.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_EvasiveManeuver.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_GameController.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_Mover.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_PlayerController.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_RandomRotator.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Done_WeaponController.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\HealtBar.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\HealthPowerUp.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\HomingMissile.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\HomingMissilesPowerUp.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\PowerUpDrop.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\Shield.cs" />
-    <Compile Include="Assets\_Complete-Game\Scripts\ShieldPowerUp.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\BGScroller.cs" />
+    <Compile Include="Assets\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
+    <Compile Include="Assets\Scripts\DestroyByContact.cs" />
+    <Compile Include="Assets\Scripts\DestroyByTime.cs" />
+    <Compile Include="Assets\Scripts\EvasiveManeuver.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\HealtBar.cs" />
+    <Compile Include="Assets\Scripts\HealthPowerUp.cs" />
+    <Compile Include="Assets\Scripts\HomingMissile.cs" />
+    <Compile Include="Assets\Scripts\HomingMissilesPowerUp.cs" />
+    <Compile Include="Assets\Scripts\Mover.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PowerUpDrop.cs" />
+    <Compile Include="Assets\Scripts\RandomRotator.cs" />
+    <Compile Include="Assets\Scripts\SFXController.cs" />
+    <Compile Include="Assets\Scripts\Shield.cs" />
+    <Compile Include="Assets\Scripts\ShieldPowerUp.cs" />
+    <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -296,19 +296,19 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.5f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/franc/OneDrive/Desktop/test/TBS-DevTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.5f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
