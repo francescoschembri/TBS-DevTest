@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\HealthPowerUp.cs" />
     <Compile Include="Assets\Scripts\HomingMissile.cs" />
     <Compile Include="Assets\Scripts\HomingMissilesPowerUp.cs" />
+    <Compile Include="Assets\Scripts\KamikazeEnemy.cs" />
     <Compile Include="Assets\Scripts\LevelManger.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
