@@ -34,8 +34,8 @@ public class DestroyByContact : MonoBehaviour
 
         if (explosionVFX != null)
             Instantiate(explosionVFX, transform.position, transform.rotation);
-
-        gameController.AddScore(scoreValue);
+        if(other.tag != tag)
+            gameController.AddScore(scoreValue);
         Destroy(gameObject);
     }
 }
