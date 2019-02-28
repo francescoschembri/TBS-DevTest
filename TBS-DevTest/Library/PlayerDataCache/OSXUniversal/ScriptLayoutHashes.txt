@@ -1,6 +1,6 @@
 OSXUniversal
 PlayerPath?
-C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Builds/Linux.app
+C:/Users/franc/OneDrive/Desktop/TBS-DevTest/TBS-DevTest/Builds/Mac.app
 SceneListBegin?
 Assets/Scenes/Main Menu.unity
 Assets/Scenes/Core Game.unity
@@ -126,6 +126,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ChangeColor
 e8f5a70394bddabe9c9cfde4304d970e Assembly-CSharp.dll:.EvasiveManeuver
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
+18bc33fb1cff9c744fcd0611c386b171 Assembly-CSharp.dll:.KamikazeEnemy
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DangerSFX
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -180,4 +181,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 be2d1663d6bc8ce39ce9c8dea6a963c7 Assembly-CSharp.dll:.BGScroller
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-d97ec00f0a91dd3c0fd100f075063e0e Assembly-CSharp.dll:.GameController
+5fde660e3a5a38c851b715f34e905682 Assembly-CSharp.dll:.GameController
