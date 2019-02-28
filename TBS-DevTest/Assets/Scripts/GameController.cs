@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine.UI;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class GameController : MonoBehaviour
 {
@@ -15,6 +19,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Text scoreText;
     [SerializeField] Text restartText;
     [SerializeField] Text gameOverText;
+    [SerializeField] Text leaderboardText;
+    [SerializeField] const string SCORES_FILE_NAME = "/scores.txt";
 
     [SerializeField] KeyCode pauseKey = KeyCode.P;
     [SerializeField] KeyCode restartKey = KeyCode.R;
@@ -51,6 +57,7 @@ public class GameController : MonoBehaviour
         restart = false;
         restartText.text = "";
         gameOverText.text = "";
+        leaderboardText.text = "";
         score = 0;
         UpdateScore();
         StartCoroutine(SpawnWaves());
@@ -121,31 +128,30 @@ public class GameController : MonoBehaviour
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
-        while (true)
+        while (!gameOver)
         {
             for (int i = 0; i < hazardCount; i++)
             {
-                GameObject hazard = hazards[Random.Range(0, hazards.Length)];
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+                GameObject hazard = hazards[UnityEngine.Random.Range(0, hazards.Length)];
+                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 Instantiate(hazard, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
-
-            if (gameOver)
-            {
-                restartText.text = "Press 'R' for Restart";
-                restart = true;
-                break;
-            }
         }
+        restartText.text = "Press 'R' for Restart";
+        restart = true;
     }
 
     public void AddScore(int newScoreValue)
     {
         score += newScoreValue;
         UpdateScore();
+        if (gameOver) 
+        {
+            ShowHiScores();
+        }
     }
 
     void UpdateScore()
@@ -153,10 +159,70 @@ public class GameController : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
+    //void HideScore()
+    //{
+        //scoreText.text = "";
+    //}
+
     public void GameOver()
     {
         gameOverText.text = "Game Over!";
         gameOver = true;
+    }
+
+    public void ShowHiScores()
+    {
+        List<int> scores = LoadFromDisk();
+        scores.Add(score);
+        scores.Sort();
+        int max = Mathf.Clamp(scores.Count - 1, 0, 5);
+        int min = max == 5 ? 1 : 0;
+        for (int i = max; i >= min; i--)
+        {
+            leaderboardText.text += scores[i].ToString() + "\n";
+        }
+        SaveToDisk(leaderboardText.text);
+        
+    }
+
+    void SaveToDisk(string leaderboard)
+    {
+        try
+        {
+            File.WriteAllText(Application.persistentDataPath + SCORES_FILE_NAME, leaderboard);
+        }
+        catch
+        {
+            //TODO log error message
+        }
+    }
+
+    List<int> LoadFromDisk()
+    {
+        List<int> scores = new List<int>();
+        try
+        {
+            if (File.Exists(Application.persistentDataPath + SCORES_FILE_NAME))
+            {
+                string[] lines = File.ReadAllLines(Application.persistentDataPath + SCORES_FILE_NAME);
+                foreach (string line in lines)
+                {
+                    scores.Add(Convert.ToInt32(line));
+                }
+                return scores;
+            }
+            else
+            {
+                FileStream file = File.Create(Application.persistentDataPath + SCORES_FILE_NAME);
+                file.Close();
+                return scores;
+            }
+        }
+        catch
+        {
+            //TODO log error message
+            return scores;
+        }
     }
 
     public void DangerAlertOn()

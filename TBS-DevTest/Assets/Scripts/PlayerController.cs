@@ -92,8 +92,8 @@ public class PlayerController : MonoBehaviour
                 Instantiate(explosionVFX, transform.position, transform.rotation);
             }
             Instantiate(explosionVFX, transform.position, transform.rotation);
-            Destroy(gameObject);
             gameController.GameOver();
+            Destroy(gameObject);
         }
     }
 
